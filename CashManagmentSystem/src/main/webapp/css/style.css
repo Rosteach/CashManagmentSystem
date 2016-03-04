@@ -1,0 +1,162 @@
+@CHARSET "UTF-8";
+
+a{text-decoration: none;}
+
+b{margin:auto;}
+
+ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+/*View*/
+body {
+    margin: 0;
+    height: 500px;
+}
+/*View of header*/
+.header{
+	border: 3px solid #a4d2a8;
+	background-color: #a4d2a8;
+    margin: auto;
+    overflow: auto;
+    border-bottom:2px solid #575757; 
+}
+.header h1{
+    text-align: center;
+}
+.button {
+    color: white;
+    margin-left: 47.7%;
+    width: 5%;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #575757;
+}
+.Signed{
+    width: 15%;
+    margin-left: 85%;
+}
+/*View of center*/
+#content{
+    overflow: auto;
+	position: relative;
+	text-align: center;
+    height: 80%;
+}
+.conCen{
+    position: absolute;
+    top: 0;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    width: 60%;
+    height: 100%;
+    border-left:2px solid #575757;
+    border-right:2px solid #575757;
+}
+.conCen img{
+    margin-top: 1%;
+}
+.conCen h3{
+    color: #575757;
+    margin-top: 3%;
+}
+/*View of login*/
+.login{
+	color: white;
+	background: #575757;
+	position: absolute;
+	border-radius: 3px 3px 3px 3px;
+    top: 0;
+    right: 0;
+    width: 19.9%;
+    height: 50%;
+}
+.login form{
+    margin-top: 6.5%;
+}
+.login p{
+    margin: auto;
+    padding: 2%;
+}
+.login input{
+    width: 70%;
+    height: 
+}
+.login button{
+    width: 20%;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 5%;
+}
+/*View of menu*/
+.left{
+    position: absolute;
+    width: 10%;
+    height: 50%;
+}
+.menu a{
+    background: #575757;
+    color:white;
+    padding: 15.5px;
+    display: block;
+    border-bottom: 1px solid #666;
+    transition: 0.5s all;
+}
+.menu a:hover{
+    background: #666;
+    padding: 10px 0 10px 20px;
+}
+.menu li:first-child a,
+.menu li .podmenu_drop li:first-child a{
+    border-radius: 3px 3px 0 0;
+}
+.menu li:last-child a,
+.menu li .podmenu_drop li:last-child a{
+    border-radius: 0 0 3px 3px;
+    border-bottom: 0;
+}
+.menu li .podmenu_drop li a{
+    border-radius:0;
+    border-bottom: 1px solid#666;
+}
+/*Drop menu*/
+.menu_drop{
+    position: relative;
+}
+
+.podmenu_drop{
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    top: -9999em;
+    opacity: 0;
+    border-left: 1px solid transparent;
+    transition: 0.5s opacity;
+}
+
+.menu_drop:hover .podmenu_drop{
+    opacity: 1;
+    top:0;
+}
+/*Images for drop menu*/
+.menu_drop::after{
+    position: absolute;
+    border: 5px solid;
+    border-color: transparent transparent transparent #eee;
+    top: 1em;
+    right: 0.01em;
+    transition: 0.5s;
+}
+
+.menu_drop:hover::after{
+    transform: skaleX(-1);
+}
+
+.footer{
+    color: black;
+    text-align: center;
+    background-color: darkseagreen;
+    overflow: auto;
+    height: 10%;
+    border-top: 2px solid #575757; 
+}

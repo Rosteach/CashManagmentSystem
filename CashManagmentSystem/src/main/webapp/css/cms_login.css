@@ -1,0 +1,125 @@
+@CHARSET "UTF-8";
+
+a{text-decoration: none;}
+
+b{margin:auto;}
+
+ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+/*View*/
+body {
+    margin: 0;
+    height: 500px;
+}
+/*View of header*/
+.header{
+    text-align: center;
+	border: 3px solid #a4d2a8;
+	background-color: #a4d2a8;
+    margin: auto;
+    overflow: auto;
+    border-bottom:2px solid #575757; 
+}
+.button {
+    color: white;
+    margin-left: 47.7%;
+    width: 7%;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #575757;
+}
+.signed{
+    width: 15%;
+    margin-left: 85%;
+}
+/*View of center*/
+#content{
+    overflow: auto;
+	position: relative;
+	text-align: center;
+    height: 80%;
+}
+.conCen{
+    position: absolute;
+    top: 0;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    width: 60%;
+    height: 100%;
+    border-left:2px solid #575757;
+    border-right:2px solid #575757;
+}
+.conCen img{
+    margin-top: 1%;
+}
+.conCen h3{
+    color: #575757;
+    margin-top: 3%;
+}
+.form {
+    display: none;
+}
+#form{
+    padding: 1%;
+    margin: auto;
+    background: white;
+    width: 30%;
+    
+}
+#form p{
+    text-align: center;
+    padding: 1%;
+}
+#form p input{
+    text-align: center;
+    width: 80%;
+    padding: 2%
+}
+#form button{
+    width: 20%;
+    text-align: center;
+}
+
+/*View of menu*/
+.left{
+    position: absolute;
+    width: 20%;
+    height: 50%;
+}
+
+.menu li a{
+    background: #575757;
+    color:white;
+    padding: 15.5px;
+    display: block;
+    border-bottom: 1px solid #666;
+    
+}
+.menu a:hover{
+    background: #666;
+}
+.menu li ul{
+    display: none;
+}
+.menu ul li a{
+    width: 80%;
+    margin: auto;
+    background: #a4d2a8;
+    color:white;
+    padding: 10.5px;
+    display: block;
+    border-bottom: 1px solid #666;
+    border-left: 1px solid #666;
+    border-right: 1px solid #666;
+}
+.footer{
+    color: black;
+    text-align: center;
+    background-color: darkseagreen;
+    overflow: auto;
+    height: 10%;
+    border-top: 2px solid #575757; 
+}

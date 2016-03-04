@@ -1,0 +1,160 @@
+@CHARSET "UTF-8";
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    border: 1px solid #575757;  
+    width: 60%;
+    margin: auto;
+}
+
+/*head*/
+.head ul {
+    width: 100%;
+	font: 14px Arial;
+	display: inline-table;
+	position: relative;
+}
+
+.head li {
+	float: left;
+	list-style: none;
+	text-align: center;
+    width: 20%;
+}
+
+.head li a {
+	text-decoration: none;
+	display: block;
+	color: #fff;
+	background: #575757;
+	padding: 10px;
+	border-bottom: 2px solid #fff;
+}
+
+.head li a:hover {
+	color: #575757;
+	background: #c0c0c0;
+}
+
+.head ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+    width: 100%;
+}
+
+.head ul ul li {
+	float: none;
+	position: relative;
+}
+
+.head ul ul ul {
+	position: absolute;
+	top: 0;
+	left: 100%;
+    
+}
+.head ul ul ul li{
+    width: 100%;
+}
+
+.head ul li:hover > ul {
+	display: block;
+}
+/*center*/
+.center{
+    padding-bottom: 2%;
+    margin-top: 13%;
+    margin-bottom: 13%;
+    text-align:center;
+}
+.center h1{
+    margin-bottom: 2%;   
+}
+.center .form, .center .table{
+	display: none;
+}
+
+.date #formD p{
+	display: inline-block;
+	padding:1%;
+	margin-top:2%;
+}
+.date #formD button{
+	width:15%;
+	padding:1%;
+	margin-top:2%;
+	background: #575757;
+	color: white;
+}
+button{
+	width:15%;
+	padding:1%;
+	margin-top:2%;
+}
+td {
+    border-left: 1px solid #575757;
+    border-bottom: 1px solid #575757;
+    text-align: center; 
+    padding: 1% 1.3% 1% 1.3% ;/top,left,bottom,left/
+}
+table .thead{
+    background: #a4d2a8;
+}
+table {
+    width: 90%;
+    border: 1px solid #575757;
+    margin: auto;
+    border-collapse: collapse;    
+}
+
+.form {
+    display: none;
+}
+#formAdd, #formDelete{
+	text-align: center;
+    padding: 1%;
+    margin: auto;
+    background: white;
+    width: 30%;
+    
+}
+#formAdd p, #formDelete p{
+    text-align: center;
+    padding: 1%;
+}
+#formAdd p input, #formDelete p input{
+    text-align: center;
+    width: 80%;
+    padding: 2%
+}
+#formAdd button, #formDelete button{
+	margin-top: 3%;
+    width: 20%;
+    text-align: center;
+}
+#sortByID, #sortByName, #sortByMinSum, #sortByAddress{
+	display: none;
+}
+/*footer*/
+.footer{
+    color: black;
+    text-align: center;
+    background-color: darkseagreen;
+    overflow: auto;
+    border-top: 1px solid #575757; 
+}
+.footer p{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

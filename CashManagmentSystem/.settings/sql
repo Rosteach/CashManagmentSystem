@@ -1,0 +1,2 @@
+SELECT p.merchantid, m.name, m.minSum, SUM(p.sumPayed), m.needToSend
+FROM Payment p, Merchant m WHERE m.id = p.merchantId AND p.dt>='2012-06-01 00:00:00.0' AND p.dt<='2012-07-31 23:59:59.9' GROUP BY p.merchantId, m.name, m.minSum, m.needToSend;

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/cms.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/cms.css" />
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
+    <title>Cash Management System</title>
+</head>
+<body>
+		<div class="header">
+			<h1>Cash Management System</h1>
+            <button href="#form" class="button">Registration</button>
+		</div>
+		
+		<div id = "content">
+			<div class="left">
+	        	<ul class="menu">
+	            	<li><a href="CMS.html">HomePage</a> </li>
+	            	<li><a href="InfoPage.html">Information</a> </li>
+	            	<li><a href="#">Display</a>
+	                	<ul class="podmenu">
+		                    <li><a href="List_of_Merchants.jsp">Merchants</a> </li>
+		                    <li><a href="List_of_Customers.jsp">Customers</a> </li>
+		                    <li><a href="List_of_Payments.jsp">Payments</a> </li>
+		                </ul>    
+		            </li>
+		            <li><a href="#">Contacts</a> </li>
+		         </ul>
+		     </div>
+            
+            <div class="conCen">
+            	<img src="img/attention.JPG">
+                <h3>Before using this system you need to register or sign in!</h3>
+                <div class="form">
+                    <form id="form" action="CMS_after_Reg.jsp" method="POST">
+                        <p><input type="text" name="name" placeholder="Name" required="required"/></p>
+                        <p><input type="text" name="eMail" placeholder="eMail" required="required"/></p>
+                        <p><input type="text" name="login" placeholder="Login" required="required"/></p>
+                        <p><input type="password" name="password" placeholder="password" required="required"/></p>
+                        <p><input type="date" name="date" placeholder="date" required="required"/></p>
+                        <p><button class="SignUp" type="submit">Sign Up</button></p>
+                    </form>
+                </div>
+            </div>
+
+	     
+		     <div class="login">
+                <h3>Sign In</h3>
+		     	<form action="CMS_after_login.jsp" class="Sign" method="POST">
+		     		<p>eMail:</p>
+		     			<input type="text" name="eMail" required="required"/>
+		     		<p>Password:</p>
+		     			<input type="password" name="password" required="required"/>
+                    <br>
+                    <button class="SignIn" type="submit">Sign In</button>                   
+		     	</form>	
+		     </div>
+	   </div>
+       <div class="footer">
+		  Cash Management System
+       </div>
+</body>
+</html>
