@@ -94,7 +94,7 @@ public class Merchant {
 	}
 	
 	public String getDataForWebWithSent(){
-		String ret = "<tr><td>"+id+"<td>"+ name +"<td>" + charge+"<td>"+sent+"</tr>";
+		String ret = "<tr><td>"+id+"<td>"+ name +"<td>" + charge+"<td>"+sent+"<td>"+lastSent+"</tr>";
 		return ret;		
 	}
 }

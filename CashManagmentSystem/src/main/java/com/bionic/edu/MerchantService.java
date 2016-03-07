@@ -8,7 +8,8 @@ public interface MerchantService {
 	public void save(Merchant merchant);
 	public void remove(int id);
 	public void updateAccount(int id, String newAccount);
-	public void updateSent(int id, Double newSent);
+	public void updateSent(int id, double newSent);
+	public void updateLastSent(int id);
 	public List<Merchant> findAll();
 	public List<Merchant> getSortedByNeedToPay();
 	public List<Merchant> getSortedByID();

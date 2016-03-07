@@ -8,4 +8,5 @@ public interface UsersDao {
 	public List<Users> findAll();
 	public List<Users> findName();
 	public List<Users> findAllEmail();
+	public String findPass(String eMail);
 }

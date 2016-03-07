@@ -1,5 +1,6 @@
 package com.bionic.edu;
 
+import java.sql.Date;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -56,8 +57,8 @@ public class MerchantServiceImpl implements MerchantService{
 		return merchantDao.getSortedByMinSum();
 	}
 
-	@Override
-	public void updateSent(int id, Double newSent) {
+	@Transactional
+	public void updateSent(int id, double newSent) {
 		// TODO Auto-generated method stub
 		merchantDao.updateSent(id, newSent);
 	}
@@ -66,6 +67,12 @@ public class MerchantServiceImpl implements MerchantService{
 	public List<Result> generatePayList(java.sql.Timestamp  dateF, java.sql.Timestamp  dateS) {
 		// TODO Auto-generated method stub
 		return merchantDao.generatePayList(dateF, dateS);
+	}
+
+	@Transactional
+	public void updateLastSent(int id) {
+		// TODO Auto-generated method stub
+		merchantDao.updateLastSent(id);
 	}
 }
 

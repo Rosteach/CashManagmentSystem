@@ -110,7 +110,7 @@ table {
     border-collapse: collapse;    
 }
 
-.center .tableAfter,.center .Send{
+.center .tableAfter,.center .Send, .center .tableAfterSend{
     display: none;
 }
 #formAdd, #formDelete{

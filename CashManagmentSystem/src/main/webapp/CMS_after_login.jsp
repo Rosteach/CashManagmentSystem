@@ -22,8 +22,13 @@
 							"spring/application-config.xml");
 		     		    com.bionic.edu.UsersService usersService = 
 						(com.bionic.edu.UsersService) context.getBean("usersServiceImpl");
-						String list = usersService.findByEmail(request.getParameter("eMail"));
-						out.print(list);
+		     		    String list = usersService.findByEmail(request.getParameter("eMail"));
+		     		    	if((usersService.findPass(request.getParameter("eMail"))).equals(request.getParameter("password"))){
+		     		    		out.print(list);
+							}
+		     		    	else{
+		     		    		out.print("Incorrect Data");
+		     		    	}
 				    %>
 		     	</p>     
             </div>	
@@ -33,6 +38,7 @@
 		<div id = "content">
 			<div class="left">
 	        	<ul class = menu>
+	        		<li><a href="index.html">HomePage</a> </li>
 	            	<li><a href="InfoPage.html">Information</a> </li>
 	            	<li class="menu_drop"><a href="#">Display</a>
 	                	<ul>

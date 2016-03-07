@@ -29,4 +29,8 @@ public class UsersServiceImpl implements UsersService{
 	 public String findByEmail(String eMail) { 
     	return usersDao.findByEmail(eMail); 
     }
+	@Override
+	public String findPass(String eMail) {
+		return usersDao.findPass(eMail);
+	}
 }

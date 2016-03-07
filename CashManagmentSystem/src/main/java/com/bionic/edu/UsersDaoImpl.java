@@ -32,6 +32,16 @@ public class UsersDaoImpl implements UsersDao{
 		return query.getSingleResult();
 	}
 	@Override
+	public String findPass(String eMail) {
+		//Users users;
+		String txt ="SELECT u.password FROM ";
+		txt +="Users u ";
+		txt +="where u.email ='"+eMail+"'";
+		TypedQuery<String> query = em.createQuery(txt,String.class);
+		//users = (Users)query.getSingleResult();
+		return query.getSingleResult();
+	}
+	@Override
 	public List<Users> findAll() {
 		TypedQuery<Users> query = em.createQuery("SELECT u FROM Users u",  Users.class);
 	    List<Users> listU = query.getResultList();
@@ -49,5 +59,6 @@ public class UsersDaoImpl implements UsersDao{
 	    List<Users> listU = query.getResultList();
 	    return listU; 
 	}
+	
 }
     

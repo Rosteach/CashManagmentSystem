@@ -55,16 +55,6 @@
 			<input class="comm" type="text" name="comm" placeholder="Commission"/>
 			<br>
 			<button class="GenTS">Generate Transfer Sum</button>
-			
-			
-			<script type="text/javascript">
-				//var tr = $("tr");
-				//var td = $("td");
-				//for(var i =0; i<=tr.lenght;i++){
-				//$("tr.thead").style.background="red";
-				//}
-			</script>
-			
 		</div>
 		
 		<div class="tableAfter">
@@ -96,14 +86,17 @@
 				<td>Name
 				<td>Charge
 				<td>Sent
+				<td>LastSent
 			</tr>
             <%	
-            	merchantService.updateSent(1,100.00);
-            	/* for(com.bionic.edu.Result r : list){
-            		merchantService.updateSent(r.getId(), r.getSum()*0.95);	
-            	} */
             	java.util.List<com.bionic.edu.Merchant> listM = merchantService.findAll();
             	for (com.bionic.edu.Merchant m : listM) {
+            		for(com.bionic.edu.Result r : list){
+                		if((r.getMinSum()<=r.getSum())&(m.getId()==r.getId())){
+                			merchantService.updateSent(r.getId(), r.getSum()*0.95);
+                			merchantService.updateLastSent(r.getId());
+                		}
+                	} 
 					out.print(m.getDataForWebWithSent());
 				}	
 			%> 
