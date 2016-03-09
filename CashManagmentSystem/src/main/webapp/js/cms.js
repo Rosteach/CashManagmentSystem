@@ -38,5 +38,5 @@ $(document).ready(function(){
 		$(".tableAfterSend").show();
 		$(this).hide();
 		$(".tableAfter").hide();
-	})
+	});
 });
