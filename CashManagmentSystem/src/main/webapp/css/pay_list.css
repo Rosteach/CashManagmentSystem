@@ -84,9 +84,13 @@ body{
 .center .date p{
 	display: inline-block;
 }
-.table .comm{
+.table p{
+	border: 1px solid darkseagreen;
+	border-radius: 5px 5px 5px 5px;
 	text-align: center;
-	padding:0.5%;
+	padding:0.30%;
+	margin-left: 50%;
+	position:absolute;
 }
 
 button{
@@ -98,7 +102,7 @@ td {
     border-left: 1px solid #575757;
     border-bottom: 1px solid #575757;
     text-align: center; 
-    padding: 1% 1.3% 1% 1.3% ;/top,left,bottom,left/
+    padding: 1% 1.3% 1% 1.3% ;/*top,left,bottom,left*/
 }
 table .thead{
     background: #a4d2a8;
@@ -109,7 +113,16 @@ table {
     margin: auto;
     border-collapse: collapse;    
 }
-
+.table .tableD, .tableAfter .tableD {
+	border: 1px solid darkseagreen;
+	border-radius: 5px 5px 5px 5px;
+	width: auto;
+	padding: 0.5%;
+	margin-left: 5%;
+	margin-bottom: 1%;
+	float: left;
+	text-align: left;
+}
 .center .tableAfter,.center .Send, .center .tableAfterSend{
     display: none;
 }

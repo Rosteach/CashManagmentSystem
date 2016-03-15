@@ -31,7 +31,11 @@
 				
 		<div class="table">
 			<h1>Pay List for Merchants</h1>	
-			<span>Date Start:        Date End: </span>
+			<div class="tableD">
+				Date: <%out.print(request.getParameter("dateS"));%> - <%out.print(request.getParameter("dateF"));%>
+			</div>
+			<p>Commission 5%</p> 
+			<!-- <input class="comm" type="text" name="comm" placeholder="Commission,%" required="required"/> -->
 			<table>
 			    <tr class="thead">
 			    	<td>MerchantID
@@ -52,13 +56,14 @@
 			    %>
 			</table>
 			<br>
-			<input class="comm" type="text" name="comm" placeholder="Commission"/>
-			<br>
 			<button class="GenTS">Generate Transfer Sum</button>
 		</div>
 		
 		<div class="tableAfter">
 			<h1>Pay List for Merchants with Need to Send</h1>
+			<div class="tableD">
+				Date: <%out.print(request.getParameter("dateS"));%> - <%out.print(request.getParameter("dateF"));%>
+			</div> 
 			<table>
 			    <tr class="thead">
 			    	<td>MerchantID
@@ -67,7 +72,7 @@
 			    	<td>SumPayed
 			    	<td>NeedToSend
 			    </tr>
-			   <%
+			   <%	
 					for(com.bionic.edu.Result r : list){
 						if(r.getMinSum()<=r.getSum()){
 					    	r.setNeedToSend(r.getSum()*0.95);
@@ -78,6 +83,7 @@
 			</table>
 		</div>
 		<button class="Send">Send</button>
+		
 		<div class="tableAfterSend">
 			<h1>List of Merchants after Send</h1>
 			<table>
@@ -106,5 +112,17 @@
 	<div class="footer">
 	        <p>Cash Management System</p>
 	</div>
+	<!-- <script type="text/javascript">
+		$(document).ready(function(){
+			//if(document.getElementsByTagName("tr").value>=  )
+			var temp ="";
+			for(var i=6;i<10;i++){
+				temp = document.getElementsByTagName("tr")[i];
+				temp.getElementsByTagName("td")[4].style.background="#90EE90";
+				var t = parseFloat(document.getElementsByTagName("td")[4].html());
+				alert(t);
+			}
+		});
+	</script> -->
 </body>
 </html>

@@ -32,7 +32,7 @@ $(document).ready(function(){
 		$(".Send").show();
 		$(".table").hide();
 		$(this).hide();
-		$(".comm").hide();	
+		$(".comm").hide();
 	});
 	$(".Send").click(function(){
 		$(".tableAfterSend").show();
@@ -40,3 +40,4 @@ $(document).ready(function(){
 		$(".tableAfter").hide();
 	});
 });
+

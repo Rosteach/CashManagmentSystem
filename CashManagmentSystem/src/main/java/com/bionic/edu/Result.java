@@ -57,7 +57,7 @@ public class Result {
 		this.needToSend = needToSend;
 	}
 	public String getDataForWeb(){ 
-		String ret = "<tr><td>"+merchantId+"<td>"+ name +"<td>" +minSum+"<td>"+sum+"<td>"+needToSend+"</tr>";
+		String ret = "<tr><td>"+merchantId+"<td>"+ name +"<td>" +minSum+"<td id=>"+sum+"<td>"+needToSend+"</tr>";
 		return ret;
 	}
 }
